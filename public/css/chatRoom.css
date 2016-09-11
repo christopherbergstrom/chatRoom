@@ -26,15 +26,32 @@ body
 }
 #exit
 {
+  color: blue;
   margin-top: 2%;
   margin-bottom: 2%;
   /*margin-right: 5%;*/
   /*float: right;*/
 }
+#exit:hover
+{
+  cursor: pointer;
+}
 .inner
 {
   /*position: relative;*/
   /*width: 80vw;*/
+  height: 50vh;
+  background-color: #ffffff;
+  border: 2px solid #00ffff;
+  /*left: 10%;
+  top: 15%;*/
+}
+.innerJoinChat
+{
+  /*position: relative;*/
+  /*width: 80vw;*/
+  margin-top: 10%;
+  margin-bottom: 10%;
   height: 50vh;
   background-color: #ffffff;
   border: 2px solid #00ffff;
