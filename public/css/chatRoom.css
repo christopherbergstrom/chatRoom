@@ -2,38 +2,57 @@ body
 {
   /*background-color: blue;*/
 }
-.container
+.outer
 {
-  position: absolute;
+  /*position: absolute;*/
   margin-top: 10vh;
-  margin-left: 10vw;
-  width: 80vw;
-  height: 80vh;
+  /*margin-left: 10vw;*/
+  /*width: 80vw;
+  height: 80vh;*/
   background-color: #b3ffff;
   border: 2px solid #00ffff;
 }
 .top
 {
-  position: relative;
-  display: inline-block;
+  /*position: relative;*/
+  /*display: inline-block;*/
 }
 #welcome
 {
   margin-top: 2%;
-  margin-left: 5%;
-  float: left;
+  margin-bottom: 2%;
+  /*margin-left: 5%;*/
+  /*float: left;*/
 }
 #exit
 {
   margin-top: 2%;
-  margin-right: 5%;
-  float: right;
+  margin-bottom: 2%;
+  /*margin-right: 5%;*/
+  /*float: right;*/
+}
+.inner
+{
+  /*position: relative;*/
+  /*width: 80vw;*/
+  height: 50vh;
+  background-color: #ffffff;
+  border: 2px solid #00ffff;
+  /*left: 10%;
+  top: 15%;*/
+}
+.form
+{
+  /*height: 5vh;*/
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 #inputForm
 {
-  position: relative;
-  width: 80%;
-  left: 10%;
+  /*position: absolute;*/
+  /*width: 80%;*/
+  /*left: 10%;*/
   /*margin-top: 100%;*/
+  /*bottom: 5%;*/
   /*background-color: pink;*/
 }
