@@ -7,7 +7,7 @@ router.get('/', function(req, res, next)
 {
   if (req.query.username)
   {
-    res.render('chat', { username: req.query.username });
+    res.render('chat', { username: req.query.username, chatDB:chatDB});
     console.log(req.query.username);
     // chatDB.init();
   }

@@ -51,3 +51,4 @@ var post = function(message)
     }
   });
 }
+return ("worked, worked");
