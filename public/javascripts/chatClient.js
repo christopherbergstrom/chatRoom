@@ -1,21 +1,20 @@
 $(document).ready(function()
 {
   console.log("chatClient loaded");
-  // var chatDB = require("../routes/chatDB.js");
   $("#exit").click(function()
   {
     window.location = "http://localhost:3000";
   });
   $("#welcome").click(function()
   {
-    $.get("/chat", function(data, status){
-            alert("Data: " + data + "\nStatus: " + status);
-        });
-    // var worked = chatDB.get();
-    // if (worked)
-    // {
-    //   console.log("GET worked!");
-    // }
+    $.get("/chat/get", function(data, status)
+    {
+      // for (var i = 0; i < data.length; i++)
+      // {
+      //   console.log(data[i].entry);
+      // };
+        // alert("Data: " + data + "\nStatus: " + status);
+    });
   });
   $("#submit").click(function()
   {

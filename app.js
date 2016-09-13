@@ -17,6 +17,7 @@ app.set('view engine', 'handlebars');
 
 var index = require('./routes/index');
 var chat = require('./routes/chat');
+var chatDB = require('./routes/chatDB');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

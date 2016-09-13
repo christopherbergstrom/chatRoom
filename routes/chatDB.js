@@ -1,7 +1,12 @@
 var mysql = require("mysql");
 var con;
+function test()
+{
+  console.log("in chatDB");
+}
 var init = function()
 {
+  console.log("in init");
   con = mysql.createConnection(
   {
     host: "localhost",
@@ -9,15 +14,19 @@ var init = function()
     password: "root",
     database: "test"
   });
-  con.connect(function(err)
-  {
-    if(err)
-    {
-      console.log('Error connecting to Db');
-      return;
-    }
-    console.log('Connection established');
-  });
+  // con.connect(function(err)
+  // {
+  //   if(err)
+  //   {
+  //     console.log('Error connecting to Db');
+  //     return false;
+  //   }
+  //   else
+  //   {
+  //     console.log('Connection established');
+  //     return true;
+  //   }
+  // });
 }
 var get = function()
 {
@@ -27,10 +36,11 @@ var get = function()
 
     console.log('Data received from Db:\n');
     // console.log(rows);
-    for (var i = 0; i < rows.length; i++)
-    {
-      console.log(rows[i].entry);
-    };
+    // for (var i = 0; i < rows.length; i++)
+    // {
+    //   console.log(rows[i].entry);
+    // };
+    return rows;
   });
 
 }
@@ -51,4 +61,3 @@ var post = function(message)
     }
   });
 }
-return ("worked, worked");
