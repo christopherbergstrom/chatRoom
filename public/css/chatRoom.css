@@ -45,6 +45,7 @@ body
   border: 2px solid #00ffff;
   /*left: 10%;
   top: 15%;*/
+  overflow: auto;
 }
 .innerJoinChat
 {

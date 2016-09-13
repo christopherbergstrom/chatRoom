@@ -16,7 +16,6 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 var index = require('./routes/index');
-var chat = require('./routes/chat');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,7 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', routes);
 // app.use('/users', users);
 app.use("/", index);
-app.use("/chat", chat);
 
 // app.use("/", function(req, res)
 // {

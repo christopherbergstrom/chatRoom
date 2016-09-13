@@ -1,13 +1,15 @@
 var express = require('express');
 var router = express.Router();
+var chatDB = require("./chatDB.js");
 
 /* GET home page. */
 router.get('/', function(req, res, next)
 {
   if (req.query.username)
   {
-    console.log(req.query.username);
     res.render('chat', { username: req.query.username });
+    console.log(req.query.username);
+    // chatDB.init();
   }
   else
   {
