@@ -6,19 +6,29 @@ var router = express.Router();
 /* GET home page. */
 router.get('/get', function(req, res, next)
 {
-  console.log("in chat.js");
+  // console.log("in chat.js");
   // chatDB.test();
   // chatDB.init();
   init();
   var rows = get();
-  // var rows = chatDB.get();
-  // res.status("success").send(rows);
-  res.status("success").send("rows");
+  console.log("log 1: "+rows);
+  // var wait = setTimeout(function()
+  var wait = setInterval(function()
+  {
+    if(rows)
+    {
+      console.log("log 2: "+rows);
+      // console.log("got rows");
+      clearInterval(wait);
+      res.status("success").send(rows);
+    }
+  }, 1000);
+  // console.log(rows);
 });
 
 var init = function()
 {
-  console.log("in init");
+  // console.log("in init");
   con = mysql.createConnection(
   {
     host: "localhost",
@@ -26,22 +36,10 @@ var init = function()
     password: "root",
     database: "test"
   });
-  // con.connect(function(err)
-  // {
-  //   if(err)
-  //   {
-  //     console.log('Error connecting to Db');
-  //     return false;
-  //   }
-  //   else
-  //   {
-  //     console.log('Connection established');
-  //     return true;
-  //   }
-  // });
 }
 var get = function()
 {
+  var returnData;
   con.query('SELECT * FROM test',function(err,rows)
   {
     if(err)
@@ -50,16 +48,21 @@ var get = function()
     }
     else
     {
-      console.log('Data received from Db:\n');
+      // console.log('Data received from Db:\n');
       // console.log(rows);
       for (var i = 0; i < rows.length; i++)
       {
         console.log(rows[i].entry);
       };
-      // return rows;
+      returnData = rows;
     }
   });
-
+  setTimeout(function()
+  {
+    console.log("log 3: "+returnData);
+    return returnData;
+  }, 1000);
+  // return "hi";
 }
 var post = function(message)
 {

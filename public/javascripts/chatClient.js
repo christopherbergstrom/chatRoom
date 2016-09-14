@@ -9,10 +9,13 @@ $(document).ready(function()
   {
     $.get("/chat/get", function(data, status)
     {
-      // for (var i = 0; i < data.length; i++)
-      // {
-      //   console.log(data[i].entry);
-      // };
+      console.log("in get client");
+      console.log(data);
+      for (var i = 0; i < data.length; i++)
+      {
+        console.log("in get for loop client");
+        console.log(data[i].entry);
+      };
         // alert("Data: " + data + "\nStatus: " + status);
     });
   });
